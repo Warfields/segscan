@@ -18,15 +18,15 @@ echo "Route info" >> $OutFile
 route -n >> $OutFile
 
 echo "Scan has started, see Masscan info below"
-echo ""
+echo "" >> $OutFile
 
 echo "Masscan config file is:"
 cat ports.conf >> $OutFile
-echo "" 
+echo "" >> $OutFile
 
 echo "Targets Scanned are:"
 cat targets.txt >> $OutFile
-echoi ""
+echo "" >> $OutFile
 
 echo "Any scan output is below:" >> $OutFile
 masscan -c ports.conf -iL targets.txt --rate=450 >> $OutFile
