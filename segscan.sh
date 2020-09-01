@@ -1,10 +1,19 @@
 #!/bin/bash
 
+
+
+if [ ! -f "targets.txt" ]; then
+  echo "targets.txt doesnt exist, please create a targets.txt file with the targets of the scan"
+fi
+
+if [ ! -f "ports.conf" ]; then
+  echo "ports.conf doesnt exist, please create a ports.conf file with the masscan configuration"
+fi
+
 if [ -z "$1" ]
   then
     echo "No argument supplied, need file name"
 else
-
 OutFile=$1
 
 echo "Scan started at:" >> $OutFile
