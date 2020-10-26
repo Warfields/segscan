@@ -1,5 +1,5 @@
 #!/bin/bash
-
+Hi
 
 
 if [ ! -f "targets.txt" ]; then
